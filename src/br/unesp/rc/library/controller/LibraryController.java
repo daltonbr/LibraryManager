@@ -1,4 +1,4 @@
-package br.unesp.rc.library.beans;
+package br.unesp.rc.library.controller;
 
 /**
  * @author Dalton Lima / Lucas Pinheiro
@@ -7,9 +7,6 @@ package br.unesp.rc.library.beans;
  *  This project is under The MIT License (MIT)
  *  github.com/daltonbr/LibraryManager
  */
-public abstract class ItemCollection {
-    private int code;
-    private String name;
-    private String author;
-    private int year;
+
+public class LibraryController {
 }
