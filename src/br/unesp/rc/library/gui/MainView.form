@@ -199,18 +199,6 @@
                       <text value="Type"/>
                     </properties>
                   </component>
-                  <component id="ec5ae" class="javax.swing.JComboBox" default-binding="true">
-                    <constraints>
-                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <model>
-                        <item value="Book"/>
-                        <item value="Magazine"/>
-                        <item value="Media"/>
-                      </model>
-                    </properties>
-                  </component>
                   <component id="cad3a" class="javax.swing.JTextField" binding="findCodeTextField">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
@@ -280,6 +268,16 @@
                       <text value=""/>
                     </properties>
                   </component>
+                  <component id="4469" class="javax.swing.JTextField" binding="findTypeTextFieldTextField" default-binding="true">
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
                   <component id="4d2f6" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -306,7 +304,7 @@
                       <text value="Search for"/>
                     </properties>
                   </component>
-                  <component id="c727d" class="javax.swing.JTextField" binding="searchTextField" custom-create="true">
+                  <component id="c727d" class="javax.swing.JTextField" binding="searchTextField">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>

@@ -1,6 +1,8 @@
 package br.unesp.rc.library.gui;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * @author Dalton Lima / Lucas Pinheiro
@@ -32,6 +34,7 @@ public class MainView extends JFrame {
     private JTextField findNameTextField;
     private JTextField findAuthorTextField;
     private JComboBox findTypeComboBox;
+    private JTextField findTypeTextFieldTextField;
 
 //    saveButton.addActionListener(new ActionListener() {
 //        @Override
@@ -39,19 +42,24 @@ public class MainView extends JFrame {
 //
 //        }
 //    });
+//
+//    public MainView() {
+//        saveButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                DebugGraphics.logStream();
+//            }
+//        });
+//    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MainView");
         frame.setContentPane(new MainView().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        //frame.setSize(640,480);
         frame.setVisible(true);
 
-
-
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }
