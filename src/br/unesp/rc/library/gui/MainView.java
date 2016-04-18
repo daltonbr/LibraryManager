@@ -35,22 +35,17 @@ public class MainView extends JFrame {
     private JTextField findAuthorTextField;
     private JComboBox findTypeComboBox;
     private JTextField findTypeTextFieldTextField;
+    private JButton exitButton;
 
-//    saveButton.addActionListener(new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//
-//        }
-//    });
-//
-//    public MainView() {
-//        saveButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                DebugGraphics.logStream();
-//            }
-//        });
-//    }
+
+    public MainView() {
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MainView");
