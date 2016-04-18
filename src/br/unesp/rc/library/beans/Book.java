@@ -9,4 +9,12 @@ package br.unesp.rc.library.beans;
  */
 
 public class Book extends ItemCollection {
+    //constructor
+    public Book (int _code, String _name, String _author, boolean _available)
+    {
+        this.setCode( _code);
+        this.setName( _name);
+        this.setAuthor( _author);
+        this.setAvailable( _available);
+    }
 }
