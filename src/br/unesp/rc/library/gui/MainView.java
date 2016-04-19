@@ -1,10 +1,10 @@
 package br.unesp.rc.library.gui;
 
-//import br.unesp.rc.library.beans;
 import br.unesp.rc.library.beans.Book;
 import br.unesp.rc.library.beans.ItemCollection;
 import br.unesp.rc.library.beans.Magazine;
 import br.unesp.rc.library.beans.Media;
+import br.unesp.rc.library.controller.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -43,8 +43,16 @@ public class MainView extends JFrame {
     private JTextField findTypeTextFieldTextField;
     private JButton exitButton;
 
+    //public BookFile bookFileObject;
+
 
     public MainView() {
+
+        // instantiate the Controller class
+        LibraryController libController = new LibraryController();
+        //BookFile bookFileObject = new BookFile();
+        ItemCollection tempItem = null;
+
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -83,6 +91,9 @@ public class MainView extends JFrame {
                         break;
                 }
 
+                libController.saveItemLocally(tempItem);
+                //bookFileObject.insertItem(tempItem);   //TODO: rename Class Name
+
                 //Console Debug
                 System.out.println("object itemCollection generated! " +  tempItem.getClass()
                                     + " - Code: " + tempItem.getCode()
@@ -115,7 +126,6 @@ public class MainView extends JFrame {
         frame.pack();
         //frame.setSize(640,480);
         frame.setVisible(true);
-
     }
 
 }

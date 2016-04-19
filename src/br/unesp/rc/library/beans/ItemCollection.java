@@ -1,5 +1,7 @@
 package br.unesp.rc.library.beans;
 
+import java.io.Serializable;
+
 /**
  * @author Dalton Lima / Lucas Pinheiro
  * github.com/daltonbr/LibraryManager
@@ -7,7 +9,7 @@ package br.unesp.rc.library.beans;
  *  This project is under The MIT License (MIT)
  *  github.com/daltonbr/LibraryManager
  */
-public abstract class ItemCollection {
+public abstract class ItemCollection implements Serializable{
 
     // Variables
     private int code;
