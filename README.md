@@ -1,5 +1,5 @@
 # LibraryManager
-a simple Library Manager System made in Java - made in Java
+a simple Library Manager System made in Java
 
 ### Author
 
