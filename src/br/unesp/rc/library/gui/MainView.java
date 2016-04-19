@@ -9,6 +9,7 @@ import br.unesp.rc.library.controller.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 /**
  * @author Dalton Lima / Lucas Pinheiro
@@ -43,15 +44,11 @@ public class MainView extends JFrame {
     private JTextField findTypeTextFieldTextField;
     private JButton exitButton;
 
-    //public BookFile bookFileObject;
 
-
-    public MainView() {
+    public MainView() throws IOException, ClassNotFoundException {
 
         // instantiate the Controller class
         LibraryController libController = new LibraryController();
-        //BookFile bookFileObject = new BookFile();
-        ItemCollection tempItem = null;
 
         exitButton.addActionListener(new ActionListener() {
             @Override
@@ -92,7 +89,6 @@ public class MainView extends JFrame {
                 }
 
                 libController.saveItemLocally(tempItem);
-                //bookFileObject.insertItem(tempItem);   //TODO: rename Class Name
 
                 //Console Debug
                 System.out.println("object itemCollection generated! " +  tempItem.getClass()
@@ -119,12 +115,11 @@ public class MainView extends JFrame {
         });
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         JFrame frame = new JFrame("MainView");
         frame.setContentPane(new MainView().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        //frame.setSize(640,480);
         frame.setVisible(true);
     }
 
