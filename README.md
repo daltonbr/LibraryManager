@@ -5,8 +5,9 @@ a simple Library Manager System made in Java - made in Java
 
 * Dalton Lima - @daltonbr
 * Lucas Pinheiro - @lucaspin
+Under MIT LICENSE
 
-### Requisites: 
+### Requisites:
 Implement a library system that:
 * Store books, magazines and medias
 * Make searches for this core elements
