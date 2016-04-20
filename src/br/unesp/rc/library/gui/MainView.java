@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * @author Dalton Lima / Lucas Pinheiro
@@ -43,6 +44,7 @@ public class MainView extends JFrame {
     private JComboBox findTypeComboBox;
     private JTextField findTypeTextFieldTextField;
     private JButton exitButton;
+    private JList searchList;
 
 
     public MainView() throws IOException, ClassNotFoundException {
@@ -111,6 +113,27 @@ public class MainView extends JFrame {
                 newAvailableCheckBox.setSelected(true);
 
                 //TODO: generate the next CODE automatically
+            }
+
+        });
+
+
+
+        findButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // an array to store the filtered searched results to show
+                ArrayList<ItemCollection> arrayToShow = null;
+
+                // passes two String to a search method: the search string itself and the type (book, mag, media)
+                arrayToShow = libController.searchItem(searchTextField.getText(),
+                                                        findTypeComboBox.getSelectedItem().toString() );
+
+
+                //searchlist
+                                               //= (arrayToShow.toArray() );
+                System.out.println("Debug: Search Array size: "+ arrayToShow.size() );
             }
         });
     }

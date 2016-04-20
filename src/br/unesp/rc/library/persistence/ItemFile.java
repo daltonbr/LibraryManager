@@ -23,6 +23,14 @@ public class ItemFile implements Item, Serializable{
     // this array will hold all registers
     ArrayList<ItemCollection> itemArray = new ArrayList<>();
 
+    public ArrayList<ItemCollection> getItemArray() {
+        return itemArray;
+    }
+
+    public void setItemArray(ArrayList<ItemCollection> itemArray) {
+        this.itemArray = itemArray;
+    }
+
     public void insertItem(ItemCollection object)
     {
         itemArray.add(object);

@@ -1,8 +1,10 @@
 package br.unesp.rc.library.controller;
 
 import br.unesp.rc.library.beans.*;
+import br.unesp.rc.library.gui.MainView;
 import br.unesp.rc.library.persistence.*;
 import java.io.*;
+import java.util.ArrayList;
 
 
 /**
@@ -47,6 +49,13 @@ public class LibraryController {
         }
     }
 
+    // search method
+    public ArrayList<ItemCollection> searchItem(String stringSearch, String typeSearch)
+    {
+        return iFile.getItemArray();
+        //TODO: filter results and place in another outputArray
+        // return tempArray;
+    }
 
      // This method receive a ItemCollection Object (Book, Media or Magazine)
      // and write it into the persistence objects (initially an ArrayList)
